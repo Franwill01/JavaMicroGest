@@ -1,0 +1,39 @@
+.root {
+    -fx-font-family: "Segoe UI"; -fx-font-size: 13px;
+    -fx-base: #ffffff; -fx-background: #f4f4f4;
+    -fx-control-inner-background: white;
+    -fx-accent: #37658b; -fx-focus-color: #37658b;
+}
+.label { -fx-text-fill: #292929; }
+.page-title { -fx-font-size: 22px; -fx-font-weight: bold; }
+.section-title { -fx-font-size: 15px; -fx-font-weight: bold; }
+.muted, .small-muted { -fx-text-fill: #666666; }
+.small-muted { -fx-font-size: 11px; }
+.eyebrow, .sidebar-caption { -fx-font-size: 11px; -fx-text-fill: #666666; }
+.brand { -fx-font-size: 22px; -fx-font-weight: bold; -fx-padding: 0 8 8 8; }
+.sidebar, .sidebar-scroll, .sidebar-scroll > .viewport { -fx-background-color: #e7e9ec; }
+.sidebar .button { -fx-background-color: transparent; -fx-border-width: 0; -fx-alignment: CENTER_LEFT; }
+.sidebar .button:hover, .sidebar .button:focused { -fx-background-color: #d4dbe3; }
+.topbar { -fx-background-color: white; -fx-border-color: transparent transparent #d5d5d5 transparent; }
+.identity { -fx-font-weight: bold; }
+.button { -fx-padding: 8 12; -fx-background-radius: 3; -fx-border-radius: 3; -fx-background-color: #f9f9f9; -fx-border-color: #c8c8c8; -fx-cursor: hand; }
+.button:hover { -fx-background-color: #e9eef3; }
+.button.primary { -fx-background-color: #37658b; -fx-border-color: #37658b; -fx-text-fill: white; }
+.text-field, .combo-box, .date-picker { -fx-min-height: 34; }
+.text-field:focused { -fx-prompt-text-fill: #777777; }
+.card, .metric { -fx-background-color: white; -fx-padding: 16; -fx-border-color: #d5d5d5; }
+.metric { -fx-min-width: 180; }
+.metric-value { -fx-font-size: 23px; }
+.filterbar { -fx-padding: 10; -fx-background-color: #eeeeee; }
+.table-view { -fx-border-color: #cccccc; -fx-background-color: white; }
+.table-view .column-header { -fx-size: 34; -fx-background-color: #e8ebef; }
+.table-view .column-header .label { -fx-alignment: CENTER_LEFT; -fx-padding: 0 8; }
+.table-row-cell { -fx-cell-size: 36; }
+.table-cell { -fx-padding: 8; -fx-alignment: CENTER_LEFT; }
+.scroll-pane, .scroll-pane > .viewport { -fx-background-color: transparent; }
+.sidebar-scroll > .viewport { -fx-background-color: #e7e9ec; }
+.chart-plot-background { -fx-background-color: white; }
+.default-color0.chart-bar { -fx-bar-fill: #527a9b; }
+.default-color1.chart-bar { -fx-bar-fill: #a5b4c2; }
+.error { -fx-text-fill: #aa3030; }
+.dialog-pane { -fx-background-color: #f4f4f4; }

@@ -1,0 +1,64 @@
+ Présentation du module
+Ce projet constitue l'évaluation de fin de module de développement d'applications de bureau en Java. Il s'agit d'un travail à réaliser individuellement, visant à mettre en pratique l'ensemble des notions abordées durant le module : JavaFX, FXML, ORM JPA/Hibernate, persistance des données et bonnes pratiques de développement.
+2. Objectifs pédagogiques
+Concevoir une application desktop complète avec une interface graphique JavaFX (FXML + CSS).
+Mettre en œuvre une architecture logicielle claire séparant présentation, logique métier et accès aux données.
+Manipuler une base de données relationnelle via un ORM (Hibernate/JPA).
+Implémenter des fonctionnalités transverses courantes : pagination, recherche, filtres dynamiques.
+Intégrer un service d'envoi d'emails (notifications applicatives).
+Travailler avec un outil de gestion de versions (Git/GitHub ou GitLab).
+Rédiger une documentation technique et présenter son travail à l'oral.
+3. Sujet du projet : « MicroGest »
+MicroGest est une application de bureau destinée à la gestion des adhérents et des opérations courantes d'un établissement de microfinance (adhésion, épargne, prêts). 
+3.1 Acteurs de l'application
+Rôle
+Permissions principales
+Administrateur
+Gestion des comptes utilisateurs, des agences, paramétrage général, accès à toutes les fonctionnalités
+Agent / Gestionnaire
+Gestion des adhérents et des opérations (dépôts, retraits, prêts), recherche, filtres
+Superviseur
+Consultation des statistiques, validation des opérations sensibles, export des rapports
+
+
+4. Fonctionnalités attendues
+4.1 Authentification et gestion des rôles
+Écran de connexion avec identifiant et mot de passe (mot de passe haché, jamais en clair).
+Gestion d'au moins deux profils (ex. Administrateur / Agent) avec des droits d'accès différents.
+4.2 Gestion des données (CRUD)
+Ajout, consultation, modification et suppression des adhérents et de leurs opérations.
+Formulaires avec validation des saisies (champs obligatoires, formats, doublons).
+4.3 Pagination (obligatoire)
+Les listes (adhérents, opérations, etc.) doivent être paginées côté base de données (requêtes LIMIT/OFFSET ou équivalent JPA), et non chargées intégralement en mémoire.
+Affichage du numéro de page courante, du nombre total de pages, navigation précédent/suivant/aller à la page.
+Possibilité de choisir le nombre d'éléments affichés par page.
+4.4 Recherche (obligatoire)
+Barre de recherche permettant de retrouver un enregistrement par un ou plusieurs critères (nom, numéro, téléphone, etc.).
+La recherche doit rester compatible avec la pagination (recherche + pagination combinées).
+4.5 Filtres (obligatoire)
+Filtres combinables sur les listes : par statut, par période (date de début/fin), par agence ou catégorie, etc.
+Les filtres doivent pouvoir être appliqués en complément de la recherche et de la pagination.
+4.6 Envoi d'email (obligatoire)
+Intégration d'un service d'envoi d'emails (bibliothèque Jakarta Mail / Simple Java Mail), par exemple pour :
+un email de bienvenue lors de la création d'un adhérent,
+une notification lors d'une opération importante (prêt accordé, échéance proche),
+l'envoi d'un relevé ou d'un rapport en pièce jointe.
+4.7 Tableau de bord / statistiques
+Un écran d'accueil présentant quelques indicateurs clés (nombre d'adhérents, opérations du mois, etc.), idéalement sous forme de graphiques (PieChart, BarChart de JavaFX).
+4.8 Fonctionnalités bonus (facultatives, valorisées dans le barème)
+Export des listes ou rapports au format PDF ou Excel.
+Historique / journal des actions (logs applicatifs).
+Thème sombre / clair (CSS JavaFX).
+Notifications internes (rappels d'échéances, alertes).
+5. Contraintes techniques
+Java 17 ou version supérieure.
+JavaFX avec vues en FXML, conçues avec Scene Builder ; feuilles de style CSS séparées.
+Gestionnaire de dépendances : Maven 
+Base de données relationnelle (MySQL, PostgreSQL ou H2) avec accès via JPA/Hibernate.
+Architecture en couches : présentation (contrôleurs FXML) / service (logique métier) / accès aux données (DAO ou repository).
+Gestion de versions avec Git : dépôt sur GitHub ou GitLab, historique de commits réguliers et explicites (pas de commit unique final).
+Respect des conventions de nommage Java 
+6. Livrables attendus
+Code source complet du projet, déposé sur un dépôt Git (lien à transmettre).
+Script de création de la base de données (fichier .sql) ou script de migration.
+Rapport de projet (10 à 15 pages) : contexte, analyse, modélisation (diagrammes UML), architecture, captures d'écran, difficultés rencontrées, perspectives.

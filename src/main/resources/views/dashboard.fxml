@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.chart.*?>
+<?import javafx.geometry.Insets?>
+<ScrollPane xmlns:fx="http://javafx.com/fxml/1" fitToWidth="true" fx:controller="sn.microgest.ui.DashboardController">
+ <content><VBox spacing="16">
+  <padding><Insets top="20" right="20" bottom="20" left="20"/></padding>
+  <HBox alignment="CENTER_LEFT"><Label text="Tableau de bord" styleClass="page-title"/><Region HBox.hgrow="ALWAYS"/><Button text="Actualiser" onAction="#refresh"/></HBox>
+  <HBox spacing="12">
+   <VBox spacing="6" styleClass="metric" HBox.hgrow="ALWAYS"><Label text="Adhérents"/><Label fx:id="memberCount" text="—" styleClass="metric-value"/></VBox>
+   <VBox spacing="6" styleClass="metric" HBox.hgrow="ALWAYS"><Label text="Épargne totale (F CFA)"/><Label fx:id="savings" text="—" styleClass="metric-value"/></VBox>
+   <VBox spacing="6" styleClass="metric" HBox.hgrow="ALWAYS"><Label text="Opérations du mois"/><Label fx:id="monthCount" text="—" styleClass="metric-value"/></VBox>
+  </HBox>
+  <Label text="Dépôts et retraits des six derniers mois" styleClass="section-title"/>
+  <BarChart fx:id="activity" prefHeight="235" minHeight="200" animated="false"><xAxis><CategoryAxis/></xAxis><yAxis><NumberAxis label="F CFA" forceZeroInRange="true"/></yAxis></BarChart>
+  <Label text="Dernières opérations" styleClass="section-title"/>
+  <TableView fx:id="recent" prefHeight="210"><placeholder><Label text="Aucune opération."/></placeholder></TableView>
+ </VBox></content>
+</ScrollPane>

@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.geometry.Insets?>
+<VBox xmlns:fx="http://javafx.com/fxml/1" spacing="18" fx:controller="sn.microgest.ui.ListController">
+ <padding><Insets top="20" right="20" bottom="20" left="20"/></padding>
+ <HBox alignment="CENTER_LEFT" spacing="12">
+  <VBox spacing="5"><Label fx:id="title" styleClass="page-title"/><Label fx:id="subtitle" styleClass="muted"/></VBox>
+  <Region HBox.hgrow="ALWAYS"/>
+  <Button fx:id="addButton" text="+ Ajouter" styleClass="primary" onAction="#add"/>
+ </HBox>
+ <FlowPane hgap="10" vgap="10" styleClass="filterbar">
+  <TextField fx:id="search" promptText="Rechercher…" prefWidth="220" onAction="#apply"/>
+  <ComboBox fx:id="status" promptText="Tous les statuts" prefWidth="150"/>
+  <ComboBox fx:id="agency" promptText="Toutes les agences" prefWidth="175"/>
+  <DatePicker fx:id="from" promptText="Du" prefWidth="140"/>
+  <DatePicker fx:id="to" promptText="Au" prefWidth="140"/>
+  <Button text="Appliquer" onAction="#apply"/>
+  <Button text="Réinitialiser" onAction="#reset"/>
+ </FlowPane>
+ <Label fx:id="notice" styleClass="muted" wrapText="true"/>
+ <TableView fx:id="table" VBox.vgrow="ALWAYS"><placeholder><Label text="Aucun résultat pour ces critères."/></placeholder></TableView>
+ <FlowPane fx:id="actions" hgap="10" vgap="8" alignment="CENTER_LEFT"/>
+ <HBox alignment="CENTER_LEFT" spacing="10">
+  <Label fx:id="total" styleClass="muted"/>
+  <Region HBox.hgrow="ALWAYS"/>
+  <Label text="Par page" styleClass="muted"/>
+  <ComboBox fx:id="size" prefWidth="75"/>
+  <Button fx:id="previous" text="←" onAction="#previous"/>
+  <Label fx:id="pageLabel"/>
+  <Button fx:id="next" text="→" onAction="#next"/>
+  <TextField fx:id="goTo" promptText="Page" prefWidth="60" onAction="#go"/>
+  <Button text="Aller" onAction="#go"/>
+ </HBox>
+</VBox>
+

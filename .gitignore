@@ -1,0 +1,9 @@
+/target/
+/.tools/
+/data/
+/.idea/
+*.iml
+*.log
+config/application.properties
+/release/
+/tmp/

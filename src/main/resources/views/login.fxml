@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.geometry.Insets?>
+<VBox xmlns:fx="http://javafx.com/fxml/1" fx:controller="sn.microgest.ui.LoginController" alignment="CENTER" spacing="14">
+ <padding><Insets top="25" right="30" bottom="25" left="30"/></padding>
+ <Label text="MicroGest" styleClass="page-title"/>
+ <Label text="Gestion des adhérents et des opérations" styleClass="muted"/>
+ <VBox alignment="CENTER_LEFT" spacing="12" maxWidth="390" styleClass="card">
+  <Label fx:id="heading" styleClass="section-title"/>
+  <Label fx:id="subtitle" wrapText="true" styleClass="muted"/>
+  <TextField fx:id="fullName" promptText="Nom complet"/>
+  <TextField fx:id="username" promptText="Identifiant" onAction="#login"/>
+  <PasswordField fx:id="password" promptText="Mot de passe (10 caractères minimum)" onAction="#login"/>
+  <PasswordField fx:id="confirmation" promptText="Confirmer le mot de passe" onAction="#login"/>
+  <CheckBox fx:id="demo" text="Charger des données de test"/>
+  <Label fx:id="error" wrapText="true" styleClass="error"/>
+  <Button fx:id="submit" onAction="#login" defaultButton="true" styleClass="primary" maxWidth="Infinity"/>
+ </VBox>
+ <Label text="Willy Francis BOUCKA - DITI3 - ISI" styleClass="small-muted"/>
+</VBox>

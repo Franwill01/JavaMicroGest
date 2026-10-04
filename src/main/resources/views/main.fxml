@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.geometry.Insets?>
+<BorderPane xmlns:fx="http://javafx.com/fxml/1" fx:controller="sn.microgest.ui.MainController" fx:id="root">
+ <left><ScrollPane fitToWidth="true" hbarPolicy="NEVER" prefWidth="200" styleClass="sidebar-scroll"><content>
+  <VBox spacing="4" prefWidth="200" styleClass="sidebar">
+   <padding><Insets top="30" right="16" bottom="24" left="16"/></padding>
+   <Label text="MicroGest" styleClass="brand"/>
+   <Label text="Projet JavaFX" styleClass="sidebar-caption"/>
+   <Region prefHeight="30"/>
+   <Button text="Accueil" onAction="#dashboard" styleClass="nav" maxWidth="Infinity"/>
+   <Button text="Adhérents" onAction="#members" styleClass="nav" maxWidth="Infinity"/>
+   <Button text="Comptes et opérations" onAction="#operations" styleClass="nav" maxWidth="Infinity"/>
+   <Button text="Prêts et échéances" onAction="#loans" styleClass="nav" maxWidth="Infinity"/>
+   <Region prefHeight="20"/>
+   <Label text="ADMINISTRATION" styleClass="sidebar-caption"/>
+   <Button fx:id="usersNav" text="Utilisateurs" onAction="#users" styleClass="nav" maxWidth="Infinity"/>
+   <Button fx:id="agenciesNav" text="Agences" onAction="#agencies" styleClass="nav" maxWidth="Infinity"/>
+   <Button fx:id="emailsNav" text="Emails" onAction="#emails" styleClass="nav" maxWidth="Infinity"/>
+   <Region VBox.vgrow="ALWAYS"/>
+   <Button text="Mon mot de passe" onAction="#changePassword" styleClass="nav" maxWidth="Infinity"/>
+   <Button text="Déconnexion" onAction="#logout" styleClass="nav" maxWidth="Infinity"/>
+  </VBox>
+ </content></ScrollPane></left>
+ <top>
+  <HBox alignment="CENTER_LEFT" spacing="20" styleClass="topbar">
+   <padding><Insets top="16" right="30" bottom="16" left="30"/></padding>
+   <Label text="MicroGest - Gestion des adhérents" styleClass="eyebrow"/>
+   <Region HBox.hgrow="ALWAYS"/>
+   <Label fx:id="today" styleClass="muted"/>
+   <Label fx:id="identity" styleClass="identity"/>
+  </HBox>
+ </top>
+ <center><StackPane fx:id="content"/></center>
+</BorderPane>
+

@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.geometry.Insets?>
+<DialogPane xmlns:fx="http://javafx.com/fxml/1" prefWidth="530">
+ <content><ScrollPane fitToWidth="true" prefHeight="480"><content><GridPane fx:id="fields" hgap="14" vgap="14"><padding><Insets top="16" right="20" bottom="16" left="20"/></padding><columnConstraints><ColumnConstraints minWidth="125"/><ColumnConstraints hgrow="ALWAYS"/></columnConstraints></GridPane></content></ScrollPane></content>
+</DialogPane>
